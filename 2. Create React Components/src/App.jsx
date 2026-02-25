@@ -1,5 +1,12 @@
-function App(){
-  return <h1>Hello World! </h1>
+import SubscribeButton from "./subscribeButton";
+
+function App() {
+  return (
+    <div>
+      <h1>Hello World!</h1>
+      <SubscribeButton />
+    </div>
+  );
 }
 
-export default App
+export default App;
