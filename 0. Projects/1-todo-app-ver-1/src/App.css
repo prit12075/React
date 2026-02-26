@@ -1,0 +1,23 @@
+h1 {
+  font-weight: 700;
+  font-size: 50px;
+  font-family:'Times New Roman', Times, serif;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+}
+
+.item-container {
+  text-align:left;
+}
+
+.n-row{
+  margin: 10px 3px;
+}
+
+.n-button{
+  min-width: 100px;
+}
