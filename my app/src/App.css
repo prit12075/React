@@ -1,38 +1,97 @@
-.App {
+.app {
+  display: grid;
+  gap: 2rem;
+  min-height: 100vh;
+  padding: 3rem 1.5rem 4rem;
+}
+
+@media (min-width: 768px) {
+  .app {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    padding: 4rem;
+  }
+}
+
+.hero__eyebrow {
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.75rem;
+}
+
+.hero__title {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  margin: 0 0 1rem;
+  color: var(--color-heading);
+}
+
+.hero__subtitle {
+  margin: 0 0 2rem;
+  max-width: 46ch;
+  color: var(--color-body);
+  line-height: 1.6;
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.button {
+  border-radius: 999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  text-decoration: none;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button.primary {
+  background: var(--color-accent);
+  color: #0b0f19;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button.ghost {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-heading);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.highlights {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
 }
 
-.App-link {
-  color: #61dafb;
+.highlights h2 {
+  margin-top: 0;
+  color: var(--color-heading);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.highlights ul {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.highlights li {
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--color-body);
+}
+
+.highlights li::before {
+  content: '';
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+  left: 0;
+  top: 0.6rem;
 }
