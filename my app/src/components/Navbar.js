@@ -1,8 +1,7 @@
 
 const Navbar = (props) => {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand-lg bg-dark navbar-dark"><div className="container-fluid">
         <a className="navbar-brand" href="#">
           {props.title}
         </a>
@@ -26,7 +25,7 @@ const Navbar = (props) => {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                Link
+                About
               </a>
             </li>
             
